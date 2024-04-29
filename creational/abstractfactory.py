@@ -1,7 +1,7 @@
 # Factory object that creates new instances
 class EQsFactory:
     def __init__(self):
-        # define protected List property of a class
+        # define protected List property of classes
         # it is like a class/object constant
         self._eqsfactory = [
             FabFilter(5, "Pro Q"),
@@ -9,7 +9,7 @@ class EQsFactory:
             Waves(10, "Waves")
         ]
 
-    # define a decorator method to return class property
+    # define a decorator method to return class/instance property
     @property
     def eqs(self):
         return self._eqsfactory
