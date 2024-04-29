@@ -8,4 +8,4 @@ class Window(Tk, Singleton):
         super().__init__()
 
     def __init__(self):
-        print('calling from __init__ class constructor')
+        print('calling from __init__ class constructor to initialize instance')
