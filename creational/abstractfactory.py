@@ -1,4 +1,5 @@
-# Factory object that creates new instances
+# Note! this is not a Factory pattern, we need to reimplement it
+# Factory class should create new instances based on their type
 class EQsFactory:
     def __init__(self):
         # define protected List property of classes
