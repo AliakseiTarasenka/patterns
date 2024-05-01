@@ -2,13 +2,14 @@
 # Factory class should create new instances based on their type
 class EQsFactory:
     def __init__(self):
-        # define protected List property of classes
-        # it is like a class/object constant
-        self._eqsfactory = [
+        # define protected Set property of classes
+        # it is like a class/object attributes
+        # they are inherited by subclasses and instances
+        self._eqsfactory = {
             FabFilter(5, "Pro Q"),
             UAD(4, "UAD"),
             Waves(10, "Waves")
-        ]
+        }
 
     # define a decorator method to return class/instance property
     @property

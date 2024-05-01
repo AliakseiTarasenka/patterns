@@ -9,7 +9,7 @@ class Extra(Toplevel):
         super().__init__()
         self.title("EQs")
         self.geometry("640x480")
-        self.buttons = []
+        self.buttons = set()
         # initialize button on extra window, it will create buttons using Factory method
         self.button = Button(self, text='Show EQs', command=self.show_EQs)
         self.button.pack(expand=True)
@@ -19,7 +19,8 @@ class Extra(Toplevel):
 
         eqs = eqsFactory.eqs
         for e in eqs:
-            if e.name not in self.buttons:
-                self.button = Button(self, text=f'{e.name}')
+            if e.getName() not in self.buttons:
+                self.button = Button(self, text=f'{e.getName()}')
                 self.button.pack(expand=True)
-                self.buttons.append(e.name)
+                self.buttons.add(e.getName())
+        print(self.buttons)
