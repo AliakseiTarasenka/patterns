@@ -12,6 +12,7 @@ class Window(Tk, Singleton):
         self.button.pack(expand=True)
 
     def create_window_eqs(self):
+        # we want to change global variable extraWindow defined outside the function
         global extraWindow
         extraWindow = eqswindow.Extra()
 
